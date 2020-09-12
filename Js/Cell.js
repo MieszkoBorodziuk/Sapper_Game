@@ -8,8 +8,8 @@ export class Cell extends UI {
         this.value = 0;
         this.isMine = false;
         this.isReveal = false;
-        this.isFlag = false;
-        this.selector = `[data-x="${this.x}"][data-y="${this.y}]`;
+        this.isFlagged = false;
+        this.selector = `[data-x="${this.x}"][data-y="${this.y}"]`;
         this.element = null;
     }
 
@@ -24,8 +24,8 @@ export class Cell extends UI {
         this.element.classList.add('border--revealed');
     }
 
-    toogleFlag() {
+    toggleFlag() {
         this.isFlagged = !this.isFlagged;
-        this.element.classList.toogle('cell--is-flag');
+        this.element.classList.toggle('cell--is-flag');
     }
 }

@@ -85,11 +85,10 @@ class Game extends UI {
         document.documentElement.style.setProperty('--cells-in-row', this.#numberOfCols);
     }
     #handleCellContextMenu = (e) =>{
-        e.preventDefault();
+         e.preventDefault();
         const target = e.target;
         const rowIndex = parseInt(target.getAttribute('data-y'), 10);
         const colIndex = parseInt(target.getAttribute('data-x'), 10);
-        this.#cells[rowIndex][colIndex].revealCell();
 
         const cell = this.#cells[rowIndex][colIndex]
 
